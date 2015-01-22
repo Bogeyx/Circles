@@ -4,47 +4,160 @@
 }
 
 body {
-    background: gray;
     text-align: center;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 #main {
-    border-radius: 20px;
-    width: 800px;
-    height:100%;
-    background-color: lightgray;
-    padding: 50px;
-}
+        //border-radius: 20px;
+        //width: 100%;
+        //min-width: 320px;
+        height:85%;
+        //background-color: lightgray;
+        //padding: 50px;
+    }
 
-#title h1 {
-    font-size: 30px;
-    padding: 20px;
-}
+    #viewport {
+        padding: 0px !important;
+        margin: 0px !important;
+        width: 100%;
+        height: 85%;
+        min-width: 320px;
+        min-height: 480px;
+        //background-color: #eee9a3;
+        background-image: url("../img/wood.jpg");
+        //border-radius: 20px;
+        overflow: hidden;
 
-#viewport {
-    width: 400px;
-    height: 550px;
-    background-color: beige;
-    border-radius: 20px;
-    overflow: hidden;
+    }
+
+/*    .circle {
+        padding: 0px !important;
+        margin: 0px !important;
+        border-radius: 50%;
+        box-shadow: 0px 0px 15px 3px black;
+        width: calc(100% - 50px);
+        height: calc(100% - 50px);
+        background: transparent;
+        position:absolute;
+        top: 25px;
+        left: 25px;
+    }*/
+
+    .circle {
+        padding: 0px !important;
+        margin: 0px !important;
+        border-radius: 50%;
+        width: calc(100% - 50px);
+        height: calc(100% - 50px);
+        background: transparent;
+        position:absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .circle_container {
+        width: 320px;
+        height: 320px;
+        //padding:25px;
+        //margin-top: calc(50% - 250px / 2);
+        vertical-align: middle;
+        text-align: center;
+        position: relative;
+    }
+
+//@media only screen and (max-width: 500px) {
     
+//}
+
+.star {
+    background-color: yellow;
+    box-shadow: 0px 0px 30px 10px yellow;
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
 }
 
-.view {
-    width: 400px;
-    height: 100%;
+.black {
+    box-shadow: 2px 2px 8px 2px black;
 }
 
-.button{
+.red {
+    box-shadow: 2px 2px 8px 2px darkred;
+}
+
+.blue {
+    box-shadow: 2px 2px 8px 2px darkblue;
+}
+
+.green {
+    box-shadow: 2px 2px 8px 2px darkgreen;
+}
+
+.button {
+    margin-top:5px;
+    width: 80%;
+    font-family: sans-serif;
+    font-weight: 100;
+    line-height: 2.5em;
+    
     cursor: pointer;
-    width: 200px;
-    background-color: burlywood;
+    
+    background-color: rgba(0,0,0,0.3);
+    color: darkblue;
+    //border: 2px solid darkblue;
+    //border-radius: 5px;
+    
+    -webkit-transition:  color 1s, background 1s, border 1s;
+    transition:  color 1s, background 1s, border 1s;
 }
 
-#game, #options{
-    display: none;
+.button:hover {
+    //border: 2px solid rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.1);
+    //color: white;
 }
 
-#menu, #options{
-    padding-top: 150px;
+.button:hover:after {
+    font-weight: bold;
+    content: "  >>";
+}
+
+.button:hover:before {
+    font-weight: bold;
+    content: "<<  ";
+}
+
+.transparent {
+	/* Required for IE 5, 6, 7 */
+	/* ...or something to trigger hasLayout, like zoom: 1; */
+	//width: 100%; 
+		
+	/* Theoretically for IE 8 & 9 (more valid) */	
+	/* ...but not required as filter works too */
+	/* should come BEFORE filter */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+	
+	/* This works in IE 8 & 9 too */
+	/* ... but also 5, 6, 7 */
+	filter: alpha(opacity=20);
+	
+	/* Older than Firefox 0.9 */
+	-moz-opacity:0.2;
+	
+	/* Safari 1.x (pre WebKit!) */
+	-khtml-opacity: 0.2;
+    
+	/* Modern!
+	/* Firefox 0.9+, Safari 2?, Chrome any?
+	/* Opera 9+, IE 9+ */
+	opacity: 0.2;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    position:relative;
 }
